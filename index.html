@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chrome Client</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#05090a;--text:#f2f8f6;--muted:#8fa5a0;--accent:#3ee0a0;--line:#1c2b28;color-scheme:dark;
+--display:"Sora","Segoe UI",system-ui,sans-serif;--body:"DM Sans","Segoe UI",system-ui,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6}
+body{background:radial-gradient(900px 500px at 50% -80px,#0f3a2d55,transparent 70%),var(--bg)}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+.hero{min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:56px 0}
+.logo{width:132px;height:132px;border-radius:30px;box-shadow:0 0 70px #3ee0a055,0 0 0 1px #3ee0a033;margin-bottom:34px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(40px,8vw,84px);line-height:1.02;margin:0 0 18px;letter-spacing:-.025em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);font-size:20px;max-width:34ch;margin:0 0 34px}
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:#04180f;font-family:var(--display);font-weight:800;font-size:20px;padding:18px 38px;border-radius:14px;text-decoration:none;box-shadow:0 0 44px #3ee0a055;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 64px #3ee0a088}
+.btn:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.btn svg{width:22px;height:22px}
+.sub{margin-top:16px;color:var(--muted);font-size:15px}
+#done{display:none;margin-top:18px;color:var(--accent);font-weight:500}
+.shot{padding-bottom:40px}
+.shot img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 30px 80px #000a}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--display);font-size:26px;margin:0 0 22px}
+ol{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:16px;max-width:700px}
+li{counter-increment:s;position:relative;padding-left:48px}
+li::before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:9px;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;font-weight:700;font-size:15px}
+code{background:#0e1a18;border:1px solid var(--line);padding:1px 6px;border-radius:5px;font-size:.9em}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 34px;margin:0;padding:0;list-style:none}
+.cols li{padding:0;counter-increment:none}.cols li::before{display:none}
+.cols b{display:block;margin-bottom:2px}.cols span{color:var(--muted);font-size:16px}
+.tag{color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 10px}
+@media(max-width:760px){.cols{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding:28px 0 46px;color:var(--muted);font-size:14px}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<div class="wrap hero">
+  <img class="logo" src="img/logo.png" alt="">
+  <h1>Chrome <em>Client</em></h1>
+  <p>The Minecraft launcher that looks the way you want.</p>
+  <a class="btn" id="dl" href="Chrome-Client.zip" download>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
+    Download
+  </a>
+  <div class="sub">Windows · Free · Chrome-Client.zip</div>
+  <div id="done">Download started. Unzip it and run setup.bat.</div>
+</div>
+<div class="wrap shot"><img src="img/play.png" alt="The launcher's Play page" width="1000" height="640"></div>
+<section><div class="wrap">
+  <p class="tag">The mod</p>
+  <h2>In-game features</h2>
+  <ul class="cols">
+    <li><b>Glass menu</b><span>Press Right Shift. Tabs, modules and settings, all saved.</span></li>
+    <li><b>HUD info</b><span>FPS, CPS, ping, coordinates, direction and clock.</span></li>
+    <li><b>Keystrokes</b><span>WASD, mouse buttons and space light up as you press them.</span></li>
+    <li><b>Armor status</b><span>Your armor pieces with the durability left on each.</span></li>
+    <li><b>Move HUD</b><span>Drag the info, keystrokes, armor and the game's own hotbar, health and more.</span></li>
+    <li><b>Zoom and Freelook</b><span>Hold C to zoom. Hold Alt to look around without turning.</span></li>
+    <li><b>Auto sprint</b><span>Hold forward and you sprint.</span></li>
+    <li><b>Cosmetics</b><span>Hats, capes and wings. Other Chrome Client players see yours.</span></li>
+    <li><b>Buddy</b><span>A small buddy wearing any account's skin follows you and waves, hops and dances.</span></li>
+    <li><b>YT Music</b><span>A music pill that drops into a player, with lyrics floating in the world.</span></li>
+    <li><b>Environment</b><span>Sky, fog and particle themes in green, blue, red, yellow or your own color.</span></li>
+    <li><b>Crosshair and low fire</b><span>A custom crosshair, and a shorter fire overlay.</span></li>
+  </ul>
+</div></section>
+<section><div class="wrap">
+  <p class="tag">The launcher</p>
+  <h2>Launcher features</h2>
+  <ul class="cols">
+    <li><b>Mods from Modrinth</b><span>Search and install inside the launcher. Missing dependencies are fetched for you.</span></li>
+    <li><b>Fabric in one tick</b><span>Tick Fabric and the launcher installs and starts it.</span></li>
+    <li><b>Texture packs and groups</b><span>Switch a whole group of packs on or off at once.</span></li>
+    <li><b>Pack maker</b><span>The Create tab saves finished packs straight to your resourcepacks folder.</span></li>
+    <li><b>Themes with real glass</b><span>Frosted cards, gradients and picture backgrounds in any color.</span></li>
+    <li><b>Discord status</b><span>Show "Playing Minecraft" with your own text and timer.</span></li>
+    <li><b>Streaming mode</b><span>Hides your Windows username and folder paths in the window.</span></li>
+    <li><b>Performance</b><span>Installs Entity Culling and starts the game with tuned Java flags.</span></li>
+    <li><b>Creamy sounds</b><span>Soft UI sounds across the launcher.</span></li>
+  </ul>
+</div></section>
+<section><div class="wrap">
+  <h2>Install in 3 steps</h2>
+  <ol>
+    <li>Press Download and unzip the file anywhere.</li>
+    <li>Double-click <code>setup.bat</code>. It installs what the launcher needs and makes a desktop shortcut. If Python is missing, install it with "Add python.exe to PATH" ticked, then run <code>setup.bat</code> again.</li>
+    <li>Open Chrome Client from your desktop and press Play.</li>
+  </ol>
+</div></section>
+</main>
+<footer><div class="wrap">Chrome Client is a fan-made launcher. It is not made by or affiliated with Mojang or Microsoft. Minecraft is a trademark of Mojang Synergies AB.</div></footer>
+<script>document.getElementById('dl').addEventListener('click',function(){setTimeout(function(){document.getElementById('done').style.display='block'},300)})</script>
+</body>
+</html>
